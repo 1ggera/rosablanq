@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: white;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+  color: #555;
+  text-align: center;
+}
+.grid-products
+{
+  display: flex;
+  
+}
+/* estilo de galeria */
+.gallery-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  padding: 10px;
+  
+  grid-gap: 10px;
+}
+.gallery__item {
+  position: relative;/*para posicionar el título en base a su ancestro*/
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/* para que la imagen ocupe el ancho indicado sin que se distorsione */
+}
+.gallery__title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));/*usamos rgba para lograr transparencia*/
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+/*selector para indicar cuantas filas o columnas pueden ocupar las imágenes*/
+
+/*
+.gallery__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+.gallery__item:nth-child(5) {
+  grid-column-start: span 2;
+}
+.gallery__item:nth-child(9) {
+  grid-column-start: span 2;
+}
+*/
+@media(min-width: 1024px){
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+  }
+  /* .gallery__item:nth-child(1) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-column-start: span 2;
+  }
+  .gallery__item:nth-child(5) {
+    grid-column-start: span 2;
+  }
+  .gallery__item:nth-child(9) {
+    grid-column-start: span 1;
+  }
+   */
+.header
+{
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: burlywood;
+  color: white;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero
+{
+  
+  background-color: khaki;
+  justify-content: center;
+  color: white;
+  display: flex;
+  height: 300px;
+  align-items: center;
+  position: relative;
+}
+.nombredemarca
+{
+  position: absolute;
+  border: 1px solid red;
+  width: 30%;
+  top: 10px;
+}
+.container-slogan
+{
+  position: absolute;
+  border: 1px solid blue;
+  width: 250px;
+  left: 10px;
+  bottom: 0;
+}
+.form-email
+{
+  position: absolute;
+  border: 1px solid white;
+  width: 300px;
+  right: 10px;
+  bottom:0;
+}
+.menu
+{
+  background-color: #aaa;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.main
+{
+  background-color: burlywood;
+  justify-content: center;
+  color: white;
+  display: flex;
+  height: 800px;
+  align-items: center;
+  justify-content: space-between;
+}
+.filtros
+{
+  color: white;
+  font-size: 12px;
+  height: 600px;
+  width: 200px;
+}
+.filtros ul li a
+{
+  list-style: none;
+}
+.opciones ul
+{
+  color:white;
+  font-size: 16px;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+}
+.opciones li:hover 
+{
+  background: rgba(0,0,0,0.3);
+}
+.opciones li a
+{
+  display: block;
+  padding: 15px 7.5px;
+  color: white;
+  text-emphasis: none;
+}
+.contenedor-3
+{
+  background-color: goldenrod;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 20em;
+  
+}
+.conten3
+{
+  height: 3em;
+  display: flex;
+  list-style: none;
+  position: relative;
+  left: 28em;
+}
+.conten3 li a
+{
+  display: flex;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.contenedor-2
+{
+  color: white;
+  width: 50vw;
+  height: 11em;
+  background-color: red;
+  list-style: none;
+  display: flex;
+  position: relative;
+  align-items:flex-start;
+  right: 5em;
+  top: 5em;
+}
+.contenedor-2 form
+{
+  border: 1px solid transparent;
+  color:white;
+  font-size: 16px;
+  list-style: none;
+  padding: 1em 1em;
+  left: 0;
+  align-items: center;
+  bottom: 0;
+  top: 0;
+}
+.contenedor-1
+{
+  background-color: teal;
+  width: 30%;
+  height: 11em;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  right: 0em;
+}
+.contenedor-1 ul
+{
+  color:white;
+  font-size: 16px;
+  list-style: none;
+}
+.contenedor-1 li a
+{
+  display: block;
+  margin: 0.8em;
+  color: white;
+  text-emphasis: none;
+}
