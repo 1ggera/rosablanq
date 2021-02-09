@@ -8,7 +8,7 @@
 
 body
 {
-  background-image: url(https://github.com/1ggera/rosablanq/blob/main/img/background-login.jpg);
+  background-image: url(background-image: url("https://github.com/1ggera/rosablanq/blob/main/img/background-login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
