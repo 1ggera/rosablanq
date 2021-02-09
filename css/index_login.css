@@ -8,10 +8,10 @@
 
 body
 {
-  background-image: url(img//background-login.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url(img//background-login.svg);
   background-attachment: fixed;/*se adapta a todo el dom*/
 }
 
