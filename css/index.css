@@ -74,11 +74,11 @@ body{
 
 .hero
 {
+  background-image: url(/img/background-image.jpg);
   height: calc(100% - 60px);
   margin: auto;
   padding: 0 35px;
   display: flex;
-  background-image: url(/img/background-image.jpg);
   justify-content: space-between;
   align-items: center;
   background-repeat: no-repeat;
