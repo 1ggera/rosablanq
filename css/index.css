@@ -78,9 +78,9 @@ body{
   margin: auto;
   padding: 0 35px;
   display: flex;
+  background-image: url(/img/background-image.jpg);
   justify-content: space-between;
   align-items: center;
-  background-image: url(/img/background-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
