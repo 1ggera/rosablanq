@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+body
+{
+  background-image: url(/img/background-login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;/*se adapta a todo el dom*/
+}
+
+main
+{
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+.general_container
+{
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.back_box
+{
+  width: 100%;
+  padding: 10px 20px;
+  display: flex; /*para poder acomodar los bloques de textpo uno abajo del otro*/
+  justify-content: center;
+  backdrop-filter: blur(10px);/*para tener el desenfoque del fondo*/
+  background-color: rgba(0, 128, 255, 0.3/*opacidad*/);
+}
+
+.back_box div
+{
+  margin: 100px 40px;
+  color: white;
+  transition: all 500ms; /*efecto transición al hacer un cambio*/
+}
+
+.back_box div h3 p, .back_box div button
+{
+  margin-top: 30px;
+}
+
+.back_box div h3
+{
+  font-weight: 400;
+  font-size: 26px
+}
+
+.back_box button
+{
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 550;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  transition: all 200ms;
+}
+
+.back_box button:hover
+{
+  background: #fff;
+  color: #46A2FD;
+}
+
+/* formularios */
+.container_login_register
+{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -170px;
+  left: 10px;
+
+/*efecto al ejecutar la funcion register*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.container_login_register form
+{
+  width: 100%;
+  padding: 70px 20px;
+  background: #fff;
+  position: absolute;/*para que lo podamos mover*/
+  border-radius: 15px;
+}
+
+.container_login_register form h2
+{
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #46A2FD;
+}
+
+.container_login_register form input
+{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 2.5px;
+  background: #F2F2F2;
+  font-size: 16px;
+  outline: none;
+}
+
+.container_login_register form button
+{
+  padding: 10px 40px;
+  margin-top: 40px;
+  border: none;
+  font-size: 14px;
+  background: #46A2FD;
+  border-radius: 2.5px;
+  color: white;
+  cursor: pointer;/*cursor en todo el botón*/
+  outline: none; /*borde negro al pulsar el boton registrar*/
+}
+
+/*propiedades para efecto de cajas movibles entre login y register*/
+.formulario_login
+{
+  opacity: 1; 
+  display: block;
+}
+.formulario_register
+{
+  display: none;
+}
+
+/*para que sea responsive*/
+@media screen and (max-width: 850px)
+{
+  main
+  {
+    margin-top: 50px;
+  }
+  .back_box
+  {
+    max-width: 350px;
+    height: 300px;
+    flex-direction: column;
+    margin: auto;
+  }
+  .back_box div
+  {
+    margin: 0;
+    position: absolute;
+  }
+  /*formularios*/
+  .container_login_register
+  {
+    top: -10px; /*para que vaya hacia arriba*/
+    left: 0px;/*para que vaya un poco a la izquierda*/
+    margin: auto;
+  }
+  .container_login_register form
+  {
+    position: relative;/*para que no ocupe la posición superior sobre el formulario de registro*/
+  }
+}
