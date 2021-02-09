@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login y Registro</title>
+    <!-- <link href="inserte_la_fuente_deseada y luego pegar en .css la fuente de familia"> -->
+    <link rel="stylesheet" href="./css/index_login.css" />
+    <!--FIREBASE-->
+  </script>
+  </head>
+  <body>
+    <main>
+      <div class="general_container">
+        <div class="back_box">
+          <div class="back_box_login">
+            <h3>¿Ya tenés una cuenta?</h3>
+            <p>Inicia sesión para entrar en tu cuenta.</p>
+            <button id="btn_iniciar_sesion">Iniciar sesión</button>
+          </div>
+          <div class="back_box_register">
+            <h3>¿Aún no tenés cuenta?</h3>
+            <p>Registrate para iniciar sesión.</p>
+            <button id="btn_registrarse">Registrarse</button>
+          </div>
+        </div>
+        <!-- Contenedor de login y registro -->
+        <div class="container_login_register">
+          <!-- login -->
+          <form action="" class="formulario_login">
+            <h2>Iniciar sesión</h2>
+            <input
+              type="text"
+              id="email_login"
+              placeholder="tucorreo@electrónico"
+            />
+            <input type="password" id="pass_login" placeholder="Contraseña" />
+            <button onclick="logination()">Ingresar</button>
+          </form>
+          <!-- registro -->
+          <form action="" class="formulario_register">
+            <h2>Registrarse</h2>
+            <input
+              type="text"
+              id="name_registration"
+              placeholder="Nombre Completo"
+            />
+            <input 
+              type="email"
+              id="email_registration"
+              placeholder="correo@electrónico"
+            />
+            <input type="text" id="user_registration" placeholder="Usuario" />
+            <input
+              type="password"
+              id="pass_registration"
+              placeholder="Contraseña"
+            />
+            <button onclick="registration()">Registrar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./js/script_login.js"></script>
+  </body>
+</html>
