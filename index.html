@@ -1,310 +1,369 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blanquería Rosario</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blanquería Rosario</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 </head>
-<body>
-  <header class="header">
-    <div class="header__top">
-      <div class="header__top__logo">
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top__logo">
+          <a href="#">
+            <!-- Por el momento va a ser asi hasta tener un logo -->
+            <span class="logo">LOGO</span>
+          </a>
+        </div>
+        <h1 class="header__top__title">Blanquería Rosario</h1>
+      </div>
+      <section class="hero">
+        <!-- Dentro del HERO va a ir el SLOGAN y el FORMULARIO para que se puedan suscribir -->
+        <div class="hero__slogan">
+          <!-- Slogan -->
+          <h2 class="hero__slogan__title">Temporada de verano</h2>
+          <span class="hero__slogan__hashtag">#PRENDAS QUE CUIDAN</span>
+        </div>
+        <div class="hero__form">
+          <legend>Suscribete para envíos gratis</legend>
+          <form action="#" method="POST" id="heroForm" class="form__hero">
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              placeholder="Apellido"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="tu@email"
+              required
+            />
+            <ul class="hero__form__error" id="heroFormError"></ul>
+            <button class="hero__form__button__send">¡Enviar!</button>
+          </form>
+        </div>
+      </section>
+    </header>
+    <section class="container__navbar">
+      <!-- Logo -->
+      <!-- Lado Izquierdo -->
+      <div class="container__navbar__logo">
+        <!-- Por el momento va a ser asi hasta tener un logo -->
         <a href="#">
-          <!-- Por el momento va a ser asi hasta tener un logo -->
           <span class="logo">LOGO</span>
         </a>
       </div>
-      <h1 class="header__top__title">Blanquería Rosario</h1>
-    </div>
-    <section class="hero">
-      <!-- Dentro del HERO va a ir el SLOGAN y el FORMULARIO para que se puedan suscribir -->
-      <div class="hero__slogan">
-        <!-- Slogan -->
-        <h2 class="hero__slogan__title">Temporada de verano</h2>
-        <span class="hero__slogan__hashtag">#PRENDAS QUE CUIDAN</span>
-      </div>
-      <div class="hero__form">
-        <legend>Suscribete para envíos gratis</legend>
-        <form action="#" method="POST" id="heroForm" class="form__hero">
-          <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-          <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-          <input type="email" name="email" id="email" placeholder="tu@email" required>
-          <ul class="hero__form__error" id="heroFormError"></ul>
-          <button class="hero__form__button__send">!Enviar¡</button>
-        </form>
-      </div>
-    </section>
-  </header>
-  <section class="container__navbar">
-    <!-- Logo -->
-    <!-- Lado Izquierdo -->
-    <div class="container__navbar__logo">
-      <!-- Por el momento va a ser asi hasta tener un logo -->
-      <a href="#">
-        <span class="logo">LOGO</span>
-      </a>
-    </div>
-    <!-- Navegacion -->
-    <!-- Lado Derecho -->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__list__item">
-          <a href="#" class="nav__list__item__element">
-            <i class="bx bx-heart"></i>
-          </a>
-        </li>
-        <li class="nav__list__item">
-          <a href="#" class="nav__list__item__element">
-            <i class="bx bx-cart"></i>
-          </a>
-        </li>
-        <li class="nav__list__item">
-          <a href="#" class="nav__list__item__element">
-            <i class="bx bxs-truck"></i>
-          </a>
-        </li>
-        <li class="nav__list__item">
-          <a href="#" class="nav__list__item__element">
-            <i class="bx bx-user" ></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </section>
-  <main>
-    <section class="products">
-      <h1 class="products__title">Galería de productos</h1>
-      <div class="product-filter-mobile">
-        <ul class="product-filter-mobile-list">
-          <li class="product-filter-mobile-item" id="productsMobileFilter">
-            <a href="#" class="product-filter-mobile-element">Productos<i class='bx bx-chevron-down' id="chevronProducts"></i></a>
-            <!-- Nav -->
-            <nav class="nav-filter-products-mobile" id="navFilterProducts">
-              <ul class="list-filter-products-mobile">
-                <li class="item-filter-products-mobile">
-                  <a href="#" class="element-filter-products-mobile">Toallas</a>
-                </li>
-                <li class="item-filter-products-mobile">
-                  <a href="#" class="element-filter-products-mobile">Toallaones</a>
-                </li>
-                <li class="item-filter-products-mobile">
-                  <a href="#" class="element-filter-products-mobile">Sabanas</a>
-                </li>
-                <li class="item-filter-products-mobile">
-                  <a href="#" class="element-filter-products-mobile">Barbijos</a>
-                </li>
-              </ul>
-            </nav>
+      <!-- Navegacion -->
+      <!-- Lado Derecho -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list__item">
+            <a href="#" class="nav__list__item__element">
+              <i class="bx bx-heart"></i>
+            </a>
           </li>
-          <li class="product-filter-mobile-item" id="colorsMobileFilter">
-            <a href="#" class="product-filter-mobile-element">Colores<i class='bx bx-chevron-down' id="chevronColors"></i></a>
-            <!-- Nav -->
-            <nav class="nav-filter-colors-mobile" id="navFilterColorsMobile">
-              <ul class="nav-filter-colors-list">
-                <li class="nav-filter-colors-item">
-                  <a href="#" class="nav-filter-colors-element">Rojo</a>
-                <li class="nav-filter-colors-item">
-                  <a href="#" class="nav-filter-colors-element">Amarillo</a>
-                <li class="nav-filter-colors-item">
-                  <a href="#" class="nav-filter-colors-element">Negro</a>
-                <li class="nav-filter-colors-item">
-                  <a href="#" class="nav-filter-colors-element">Blanco</a>
-                <li class="nav-filter-colors-item">
-                  <a href="#" class="nav-filter-colors-element">Azul</a>
-                </li>
-              </ul>
-            </nav>
+          <li class="nav__list__item">
+            <a href="#" class="nav__list__item__element">
+              <i class="bx bx-cart"></i>
+            </a>
+          </li>
+          <li class="nav__list__item">
+            <a href="#" class="nav__list__item__element">
+              <i class="bx bxs-truck"></i>
+            </a>
+          </li>
+          <li class="nav__list__item">
+            <a href="#" class="nav__list__item__element">
+              <i class="bx bx-user"></i>
+            </a>
           </li>
         </ul>
-      </div>
-      <div class="product__filter">
-        <h1 class="product__filter__title">Filtros</h1>
-        <!-- Filtro de productos -->
-        <nav class="product__filter__nav">
-          <i class="bx bxs-chevron-right chevron__product__filter" id="productoChevron"></i>
-          <h2 class="product__filter__nav__title"  id="productoFiltro">Productos</h2>
-          <ol class="product__filter__list__products in__active" id="productoLista">
-            <li class="product__filter__list__products__item">
-              <a href="#" class="product__filter__list__element">Todos</a>
-            </li>
-            <li class="product__filter__list__products__item">
-              <a href="#" class="product__filter__list__element" category="sabanas">Sabanas</a>
-            </li>
-            <li class="product__filter__list__products__item">
-              <a href="#" class="product__filter__list__element" category="fundas">Fundas</a>
-            </li>
-            <li class="product__filter__list__products__item">
-              <a href="#" class="product__filter__list__element" category="toallas">Toallas</a>
-            </li>
-            <li class="product__filter__list__products__item">
-              <a href="#" class="product__filter__list__element" category="toallones">Toallones</a>
-            </li>
-            <li class="product__filter__list__products__item">
-              <a href="#" class="product__filter__list__element" category="barbijos">Barbijos</a>
-            </li>
-          </ol>
-        </nav>
-        <!-- Filtro de colores de productos -->
-        <nav class="color__filter__nav">
-          <i class="bx bxs-chevron-right chevron__color__filter" id="chevronColor"></i>
-          <h2 class="color__filter__nav__title" id="coloresFiltro">Colores</h2>
-          <ol class="color__filter__list in__active" id="colorList">
-            <li class="product__filter__list__colors__item">
-              <a href="#" class="product__filter__list__colors">Todos</a>
-            </li>
-            <li class="product__filter__list__colors__item">
-              <a href="#" class="product__filter__list__colors" category="blanco">Blanco</a>
-            </li>
-            <li class="product__filter__list__colors__item">
-              <a href="#" class="product__filter__list__colors" category="negro">Negro</a>
-            </li>
-            <li class="product__filter__list__colors__item">
-              <a href="#" class="product__filter__list__colors" category="rojo">Rojo</a>
-            </li>
-            <li class="product__filter__list__colors__item">
-              <a href="#" class="product__filter__list__colors" category="azul">Azul</a>
-            </li>
-            <li class="product__filter__list__colors__item">
-              <a href="#" class="product__filter__list__colors" category="amarillo">Amarillo</a>
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <!-- Productos -->
-      <div class="products__container">
-        <div class="products__container__grid">
-          <div class="product" category="sabanas negro">
-            <i class="bx bx-heart product__heart__save"></i>
-            <figure class="product__image">
-              <img src="./images/img-1.jpg" width="100%" alt="">
-            </figure>
-            <div class="description">
-              <h1 class="product__title">Almohada</h1>
-              <p class="product__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis adipisci, perferendis quos veniam iusto. Ab vel architecto quibusdam minus.
-              </p>
+      </nav>
+    </section>
+    <main>
+      <section class="products">
+        <h1 class="products__title">Galería de productos</h1>
+        <div class="product__filter">
+          <h1 class="product__filter__title">Filtros</h1>
+          <!-- Filtro de productos -->
+          <nav class="product__filter__nav">
+            <i
+              class="bx bxs-chevron-right chevron__product__filter"
+              id="productoChevron"
+            ></i>
+            <h2 class="product__filter__nav__title" id="productoFiltro">
+              Productos
+            </h2>
+            <ol
+              class="product__filter__list__products in__active"
+              id="productoLista"
+            >
+              <li class="product__filter__list__products__item">
+                <a href="#" class="product__filter__list__element">Todos</a>
+              </li>
+              <li class="product__filter__list__products__item">
+                <a
+                  href="#"
+                  class="product__filter__list__element"
+                  category="sabanas"
+                  >Sabanas</a
+                >
+              </li>
+              <li class="product__filter__list__products__item">
+                <a
+                  href="#"
+                  class="product__filter__list__element"
+                  category="fundas"
+                  >Fundas</a
+                >
+              </li>
+              <li class="product__filter__list__products__item">
+                <a
+                  href="#"
+                  class="product__filter__list__element"
+                  category="toallas"
+                  >Toallas</a
+                >
+              </li>
+              <li class="product__filter__list__products__item">
+                <a
+                  href="#"
+                  class="product__filter__list__element"
+                  category="toallones"
+                  >Toallones</a
+                >
+              </li>
+              <li class="product__filter__list__products__item">
+                <a
+                  href="#"
+                  class="product__filter__list__element"
+                  category="barbijos"
+                  >Barbijos</a
+                >
+              </li>
+            </ol>
+          </nav>
+          <!-- Filtro de colores de productos -->
+          <nav class="color__filter__nav">
+            <i
+              class="bx bxs-chevron-right chevron__color__filter"
+              id="chevronColor"
+            ></i>
+            <h2 class="color__filter__nav__title" id="coloresFiltro">
+              Colores
+            </h2>
+            <ol class="color__filter__list in__active" id="colorList">
+              <li class="product__filter__list__colors__item">
+                <a href="#" class="product__filter__list__colors">Todos</a>
+              </li>
+              <li class="product__filter__list__colors__item">
+                <a
+                  href="#"
+                  class="product__filter__list__colors"
+                  category="blanco"
+                  >Blanco</a
+                >
+              </li>
+              <li class="product__filter__list__colors__item">
+                <a
+                  href="#"
+                  class="product__filter__list__colors"
+                  category="negro"
+                  >Negro</a
+                >
+              </li>
+              <li class="product__filter__list__colors__item">
+                <a
+                  href="#"
+                  class="product__filter__list__colors"
+                  category="rojo"
+                  >Rojo</a
+                >
+              </li>
+              <li class="product__filter__list__colors__item">
+                <a
+                  href="#"
+                  class="product__filter__list__colors"
+                  category="azul"
+                  >Azul</a
+                >
+              </li>
+              <li class="product__filter__list__colors__item">
+                <a
+                  href="#"
+                  class="product__filter__list__colors"
+                  category="amarillo"
+                  >Amarillo</a
+                >
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <!-- Productos -->
+        <div class="products__container">
+          <div class="products__container__grid">
+            <div class="product" category="sabanas negro">
+              <i class="bx bx-heart product__heart__save"></i>
+              <figure class="product__image">
+                <img src="./images/img-1.jpg" width="100%" alt="" />
+              </figure>
+              <div class="description">
+                <h1 class="product__title">Almohada</h1>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  omnis adipisci, perferendis quos veniam iusto. Ab vel
+                  architecto quibusdam minus.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="product" category="toallas rojo">
-            <i class="bx bx-heart product__heart__save" id=""></i>
-            <figure class="product__image">
-              <img src="./images/img-1.jpg" width="100%" alt="">
-            </figure>
-            <div class="description">
-              <h1 class="product__title">Almohada</h1>
-              <p class="product__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis adipisci, perferendis quos veniam iusto. Ab vel architecto quibusdam minus.
-              </p>
+            <div class="product" category="toallas rojo">
+              <i class="bx bx-heart product__heart__save" id=""></i>
+              <figure class="product__image">
+                <img src="./images/img-1.jpg" width="100%" alt="" />
+              </figure>
+              <div class="description">
+                <h1 class="product__title">Almohada</h1>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  omnis adipisci, perferendis quos veniam iusto. Ab vel
+                  architecto quibusdam minus.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="product" category="barbijo azul">
-            <i class="bx bx-heart product__heart__save" id=""></i>
-            <figure class="product__image">
-              <img src="./images/img-1.jpg" width="100%" alt="">
-            </figure>
-            <div class="description">
-              <h1 class="product__title">Almohada</h1>
-              <p class="product__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis adipisci, perferendis quos veniam iusto. Ab vel architecto quibusdam minus.
-              </p>
+            <div class="product" category="barbijo azul">
+              <i class="bx bx-heart product__heart__save" id=""></i>
+              <figure class="product__image">
+                <img src="./images/img-1.jpg" width="100%" alt="" />
+              </figure>
+              <div class="description">
+                <h1 class="product__title">Almohada</h1>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  omnis adipisci, perferendis quos veniam iusto. Ab vel
+                  architecto quibusdam minus.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="product" category="toallones amarillo">
-            <i class="bx bx-heart product__heart__save" id=""></i>
-            <figure class="product__image">
-              <img src="./images/img-1.jpg" width="100%" alt="">
-            </figure>
-            <div class="description">
-              <h1 class="product__title">Almohada</h1>
-              <p class="product__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis adipisci, perferendis quos veniam iusto. Ab vel architecto quibusdam minus.
-              </p>
+            <div class="product" category="toallones amarillo">
+              <i class="bx bx-heart product__heart__save" id=""></i>
+              <figure class="product__image">
+                <img src="./images/img-1.jpg" width="100%" alt="" />
+              </figure>
+              <div class="description">
+                <h1 class="product__title">Almohada</h1>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  omnis adipisci, perferendis quos veniam iusto. Ab vel
+                  architecto quibusdam minus.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="product" category="fundas blanco">
-            <i class="bx bx-heart product__heart__save" id=""></i>
-            <figure class="product__image">
-              <img src="./images/img-1.jpg" width="100%" alt="">
-            </figure>
-            <div class="description">
-              <h1 class="product__title">Almohada</h1>
-              <p class="product__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis adipisci, perferendis quos veniam iusto. Ab vel architecto quibusdam minus.
-              </p>
+            <div class="product" category="fundas blanco">
+              <i class="bx bx-heart product__heart__save" id=""></i>
+              <figure class="product__image">
+                <img src="./images/img-1.jpg" width="100%" alt="" />
+              </figure>
+              <div class="description">
+                <h1 class="product__title">Almohada</h1>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  omnis adipisci, perferendis quos veniam iusto. Ab vel
+                  architecto quibusdam minus.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="product" category="toallas azul">
-            <i class="bx bx-heart product__heart__save" id=""></i>
-            <figure class="product__image">
-              <img src="./images/img-1.jpg" width="100%" alt="">
-            </figure>
-            <div class="description">
-              <h1 class="product__title">Almohada</h1>
-              <p class="product__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis adipisci, perferendis quos veniam iusto. Ab vel architecto quibusdam minus.
-              </p>
+            <div class="product" category="toallas azul">
+              <i class="bx bx-heart product__heart__save" id=""></i>
+              <figure class="product__image">
+                <img src="./images/img-1.jpg" width="100%" alt="" />
+              </figure>
+              <div class="description">
+                <h1 class="product__title">Almohada</h1>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  omnis adipisci, perferendis quos veniam iusto. Ab vel
+                  architecto quibusdam minus.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <section class="footer__container">
-      <div class="footer__social">
-        <ul class="footer__social__list">
-          <li class="footer__social__item">
-            <a href="#" class="footer__social__element">
-              <i class='bx bxl-instagram'></i>
-            </a>
-          </li>
-          <li class="footer__social__item">
-            <a href="#" class="footer__social__element">
-              <i class='bx bxl-facebook' ></i>
-            </a>
-          </li>
-          <li class="footer__social__item">
-            <a href="#" class="footer__social__element">
-              <i class='bx bxl-twitter' ></i>
-            </a>
-          </li>
-          <li class="footer__social__item">
-            <a href="#" class="footer__social__element">
-              <i class='bx bxl-whatsapp' ></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__newlestter">
-        <form action="#" class="footer__newlestter__form" id="formFooterewLestter" method="POST">
-          <legend>Suscríbete a nuestros descuentos</legend>
-          <input type="email" name="email" id="emailFooter" placeholder="tu@email">
-          <button class="footer__newlestter__form__btn">Suscribirme</button>
-        </form>
-        <div class="foter__data">
-          <ul class="footer__data__list">
-            <li class="footer__data__item">
-              <a href="#" class="footer__data__element">Sobre nosotros</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer__container">
+        <div class="footer__social">
+          <ul class="footer__social__list">
+            <li class="footer__social__item">
+              <a href="#" class="footer__social__element">
+                <i class="bx bxl-instagram"></i>
+              </a>
             </li>
-            <li class="footer__data__item">
-              <a href="#" class="footer__data__element">Tú pedido</a>
+            <li class="footer__social__item">
+              <a href="#" class="footer__social__element">
+                <i class="bx bxl-facebook"></i>
+              </a>
             </li>
-            <li class="footer__data__item">
-              <a href="#" class="footer__data__element">Envíos</a>
-            </li>
-            <li class="footer__data__item">
-              <a href="#" class="footer__data__element">Contacto</a>
-            </li>
-            <li class="footer__data__item">
-              <a href="#" class="footer__data__element">Trabaja con nosotros</a>
+            <li class="footer__social__item">
+              <a href="#" class="footer__social__element">
+                <i class="bx bxl-whatsapp"></i>
+              </a>
             </li>
           </ul>
         </div>
-      </div>
-    </section>
-  </footer>
-  <script src="./js/index.js"></script>
-</body>
+        <div class="footer__newlestter">
+          <form
+            action="#"
+            class="footer__newlestter__form"
+            id="formFooterewLestter"
+            method="POST"
+          >
+            <legend>Suscríbete a nuestros descuentos</legend>
+            <input
+              type="email"
+              name="email"
+              id="emailFooter"
+              placeholder="tu@email"
+            />
+            <button class="footer__newlestter__form__btn">Suscribirme</button>
+          </form>
+          <div class="foter__data">
+            <ul class="footer__data__list">
+              <li class="footer__data__item">
+                <a href="#" class="footer__data__element">Sobre nosotros</a>
+              </li>
+              <li class="footer__data__item">
+                <a href="#" class="footer__data__element">Tú pedido</a>
+              </li>
+              <li class="footer__data__item">
+                <a href="#" class="footer__data__element">Envíos</a>
+              </li>
+              <li class="footer__data__item">
+                <a href="#" class="footer__data__element">Contacto</a>
+              </li>
+              <li class="footer__data__item">
+                <a href="#" class="footer__data__element"
+                  >Trabaja con nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
